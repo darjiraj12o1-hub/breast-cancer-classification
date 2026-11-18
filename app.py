@@ -90,9 +90,10 @@ with tab_results:
     st.dataframe(df.style.format("{:.3f}").highlight_max(axis=0, color="#c6efce"), width="stretch")
     st.write("**Recall** matters most here: it is the share of real cancers the model catches. "
              "Logistic Regression catches more cancers; SVM never gives a false alarm (precision = 1.0).")
-    charts = "charts"
-    if os.path.isdir(charts):
-        files = sorted(f for f in os.listdir(charts) if f.endswith(".png"))
+    # charts can be in a charts/ folder or next to app.py
+    charts = "charts" if os.path.isdir("charts") else "."
+    files = sorted(f for f in os.listdir(charts) if f.endswith(".png") and f[0].isdigit())
+    if files:
         for i in range(0, len(files), 2):
             cs = st.columns(2)
             for c, f in zip(cs, files[i:i + 2]):

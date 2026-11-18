@@ -29,8 +29,8 @@ Predict whether a breast tumour is **malignant (cancer)** or **benign (not cance
 
 **Conclusion:** both models are highly accurate. Logistic Regression is recommended because it has higher recall, so it misses fewer cancers. SVM gives no false alarms (100% precision).
 
-![Model comparison](charts/6_model_comparison.png)
-![Confusion matrices](charts/4_confusion_matrices.png)
+![Model comparison](6_model_comparison.png)
+![Confusion matrices](4_confusion_matrices.png)
 
 ## Repository contents
 | File | What it is |
@@ -38,7 +38,7 @@ Predict whether a breast tumour is **malignant (cancer)** or **benign (not cance
 | `breast_cancer_classification.py` | Source code (preprocessing, training, testing, evaluation, charts) |
 | `app.py` | Streamlit web app: try predictions and see results in the browser |
 | `requirements.txt` | Python libraries needed |
-| `charts/` | 7 result charts |
+| `1_...png` to `7_...png` | 7 result charts |
 | `results.json` | All metrics |
 | `Project_Report_Breast_Cancer_Classification.pdf` / `.docx` | Project report |
 | `Presentation_Breast_Cancer_Classification.pdf` / `.pptx` | Presentation slides |
@@ -48,10 +48,11 @@ Predict whether a breast tumour is **malignant (cancer)** or **benign (not cance
 pip install -r requirements.txt
 python breast_cancer_classification.py
 ```
-Each chart opens in a window (close it to see the next) and is saved in `charts/`.
+Each chart opens in a window (close it to see the next) and is saved in the `charts/` folder.
 
 ## Web app
 Run locally with `streamlit run app.py`, or open the live version: _add your Streamlit link here_
 
 ## Group members
-- ______________________
+1. Raj Darji
+2. Tirth Patel
